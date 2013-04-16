@@ -1,95 +1,40 @@
-<%@ page import="org.grails.example.Author" %>
-
-
+<%@ page import="org.grails.example.Book" %>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="layout" content="main" />
-        <title>Edit Book</title>
-    </head>
-    <body>
+	<head>
+		<meta name="layout" content="main">
+		<g:set var="entityName" value="${message(code: 'book.label', default: 'Book')}" />
+		<title><g:message code="default.edit.label" args="[entityName]" /></title>
+	</head>
+	<body>
+		<a href="#edit-book" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
     <ul class="nav nav-pills">
-      <li><g:link class="list" action="list">Book List</g:link></li>
+      <li class="active"><g:link class="list" action="list">Book List</g:link></li>
       <li><g:link class="create" action="create">New Book</g:link></li>
     </ul>
-        <div class="body">
-            <h1>Edit Book</h1>
-            <g:if test="${flash.message}">
-            <div class="message">${flash.message}</div>
-            </g:if>
-            <g:hasErrors bean="${book}">
-            <div class="errors">
-                <g:renderErrors bean="${book}" as="list" />
-            </div>
-            </g:hasErrors>
-            <g:form method="post" >
-                <input type="hidden" name="id" value="${book?.id}" />
-                <div class="dialog">
-                  <table class="table table-bordered">
-                        <tbody>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="title">Title:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:book,field:'title','errors')}">
-                                    <input type="text" id="title" name="title" value="${fieldValue(bean:book,field:'title')}"/>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="author">Author:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:book,field:'author','errors')}">
-                                    <g:select optionKey="id" from="${Author.list()}" name="author.id" value="${book?.author?.id}" ></g:select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="releaseDate">Release Date:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:book,field:'releaseDate','errors')}">
-                                    <g:datePicker name="releaseDate" value="${book?.releaseDate}" ></g:datePicker>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="price">Price:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:book,field:'price','errors')}">
-                                    <input type="text" id="price" name="price" value="${fieldValue(bean:book,field:'price')}" />
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="inStock">In Stock:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:book,field:'inStock','errors')}">
-                                    <g:checkBox name="inStock" value="${book?.inStock}" ></g:checkBox>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="lastUpdated">Last Updated:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:book,field:'lastUpdated','errors')}">
-                                    <g:datePicker name="lastUpdated" value="${book?.lastUpdated}" noSelection="['':'']"></g:datePicker>
-                                </td>
-                            </tr> 
-                        
-                        </tbody>
-                    </table>
-                </div>
-                <div class="buttons">
-                    <span class="button"><g:actionSubmit class="save btn btn-success" value="Update" /></span>
-                    <span class="button"><g:actionSubmit class="delete btn btn-danger" onclick="return confirm('Are you sure?');" value="Delete" /></span>
-                </div>
-            </g:form>
-        </div>
-    </body>
+		<div id="edit-book" class="content scaffold-edit" role="main">
+			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
+			<g:if test="${flash.message}">
+			<div class="message" role="status">${flash.message}</div>
+			</g:if>
+			<g:hasErrors bean="${book}">
+			<ul class="errors" role="alert">
+				<g:eachError bean="${book}" var="error">
+				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+				</g:eachError>
+			</ul>
+			</g:hasErrors>
+			<g:form method="post" >
+				<g:hiddenField name="id" value="${book?.id}" />
+				<g:hiddenField name="version" value="${book?.version}" />
+				<fieldset class="form">
+					<g:render template="form"/>
+				</fieldset>
+				<fieldset class="buttons">
+					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" formnovalidate="" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+				</fieldset>
+			</g:form>
+		</div>
+	</body>
 </html>

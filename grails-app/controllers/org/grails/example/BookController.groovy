@@ -80,7 +80,7 @@ class BookController {
 	def create = {
 		def book = new Book()
 		book.properties = params
-		return ['book':book]
+		['book':book]
 	}
 	
 	def save = {
@@ -92,9 +92,5 @@ class BookController {
 		else {
 			render(view:'create',model:[book:book])
 		}
-	}
-	
-	def test = {
-		render( view:'list', model:[bookList:Book.findAll( new Book(author:new Author(lastName:'Adams')) ) ])
 	}
 }

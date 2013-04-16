@@ -1,4 +1,5 @@
 package org.grails.example
+
 class Magazine extends Book {
 	
 	Date displayUntil

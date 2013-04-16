@@ -27,8 +27,8 @@
         <div class="container">
           <ul class="nav">
             <li><a href="${createLink(uri:'/')}">Home</a></li>
-            <li><a href="${createLink(controller:'book', action:'list')}">Example</a></li>
-            <li><a href="${createLink(controller:'docs', action:'index')}">Docs</a></li>
+            <li><a href="${createLink(controller:'book', action:'list')}">Book Example</a></li>
+            <li><a href="${createLink(controller:'robot', action:'list')}">Nested Example</a></li>
           </ul>
         </div>
       </div>

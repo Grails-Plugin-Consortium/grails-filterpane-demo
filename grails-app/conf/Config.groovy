@@ -94,13 +94,16 @@ log4j = {
            'org.apache',
            'grails.app.service.org.grails.plugin.filterpane.FilterPaneService'
 
-    warn   'org.mortbay.log'
+//    warn   'org.mortbay.log'
 
     //debug 'grails.app.taglib.org.grails.plugin.filterpane.FilterPaneTagLib',
     debug 'grails.app.taglib.org.grails.plugin.filterpane.FilterPaneTagLib'
 
-    root {
-        debug 'stdout'
-        additivity = true
-    }
+    trace 'org.hibernate.type'
+    debug 'org.hibernate.SQL'
+
+//    root {
+//        debug 'stdout'
+//        additivity = true
+//    }
 }

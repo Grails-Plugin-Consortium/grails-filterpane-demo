@@ -1,5 +1,5 @@
+<!-- This has been customized to be inline isntead of a popup -->
 <div id="${fp.containerId}"
-     class="filterpane${fp.containerIsDialog} ${fp.containerClass}"
      style="${fp.containerVisibleStyle}${fp.containerStyle}">
   <g:if test="${fp.showTitle}">
     <h2>${fp.title}</h2>
@@ -8,11 +8,13 @@
   <g:if test="${renderForm}">
     <form name="${fp.formName}" id="${fp.formName}" method="post" action="${createLink(action: fp.formAction)}">
   </g:if>
-<!-- Do we still need this hidden prop? -->
+<%-- Do we still need this hidden prop? --%>
   <input type="hidden" name="filterProperties" value="${fp.filterProperties}"/>
+  <input type="hidden" name="listDistinct" value="${fp.listDistinct}"/>
+  <input type="hidden" name="uniqueCountColumn" value="${fp.uniqueCountColumn}"/>
 
 
-  <table cellspacing="0" cellpadding="0" class="filterPaneTable">
+  <table cellspacing="0" cellpadding="0" class="table table-bordered">
     <g:each in="${fp.properties}" var="propMap">
       <g:render template="/filterpane/filterpaneProperty" model="${propMap}"/>
     </g:each>
@@ -29,9 +31,7 @@
   </g:else>
 
   <g:if test="${fp.showButtons == true}">
-
-  <g:render template="/filterpane/filterpaneButtons" model="${fp.buttonModel}" />
-
+    <g:render template="/filterpane/filterpaneButtons" model="${fp.buttonModel}" />
   </g:if>
 
   <g:if test="${renderForm}">

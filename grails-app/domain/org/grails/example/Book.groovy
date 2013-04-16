@@ -1,41 +1,42 @@
 package org.grails.example
 class Book {
-	static hasMany = [ bookmarks : Bookmark ]
-	
-    Author author
+
+    static hasMany = [bookmarks: Bookmark, authors: Author]
+
     Author coAuthor
     String title
     BookType bookType
     Date releaseDate
     Boolean inStock
     BigDecimal price
-	BigDecimal pricePlusTax
-	Currency currency = Currency.getInstance("USD")
+    BigDecimal pricePlusTax
+    Currency currency = Currency.getInstance("USD")
     Date lastUpdated
-    String readPriority
-    BigDecimal cost
-	
+    String readPriority  = 'Low'
+    BigDecimal cost = 0.00
+
     static constraints = {
-        title(blank:false)
-        author()
-        coAuthor(nullable:true)
-        bookType(nullable:true)
-        releaseDate()
-        price()
-		pricePlusTax()
-		currency()
-        inStock()
-        lastUpdated(nullable:true)
-        readPriority(inList:['Low','Normal','High'])
-        cost(min:0.00)
+        title(blank: true, nullable: true)
+        coAuthor(nullable: true)
+        bookType(nullable: true)
+        releaseDate(nullable:  true)
+        price(nullable:  true)
+        pricePlusTax(nullable:  true)
+        currency(nullable:  true)
+        inStock(nullable:  true)
+        lastUpdated(nullable: true)
+        readPriority(inList: ['Low', 'Normal', 'High'])
+        cost(min: 0.00)
+        authors nullable:true
+        bookmarks nullable:true
     }
-	
+
     static mapping = {
-        author lazy:false
-		pricePlusTax formula: 'price * 1.055'
-		sort "title"
+        sort "title"
+        authors lazy: false
+        pricePlusTax formula: 'price * 1.055'
     }
-	
+
     String toString() {
         return title
     }
