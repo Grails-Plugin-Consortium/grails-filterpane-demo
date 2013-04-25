@@ -12,23 +12,25 @@ class Book {
     BigDecimal pricePlusTax
     Currency currency = Currency.getInstance("USD")
     Date lastUpdated
-    String readPriority  = 'Low'
+    String readPriority = 'Low'
     BigDecimal cost = 0.00
+    Boolean isScary
 
     static constraints = {
         title(blank: true, nullable: true)
         coAuthor(nullable: true)
         bookType(nullable: true)
-        releaseDate(nullable:  true)
-        price(nullable:  true)
-        pricePlusTax(nullable:  true)
-        currency(nullable:  true)
-        inStock(nullable:  true)
+        releaseDate(nullable: true)
+        price(nullable: true)
+        pricePlusTax(nullable: true)
+        currency(nullable: true)
+        inStock(nullable: true)
         lastUpdated(nullable: true)
         readPriority(inList: ['Low', 'Normal', 'High'])
         cost(min: 0.00)
-        authors nullable:true
-        bookmarks nullable:true
+        authors nullable: true
+        bookmarks nullable: true
+        isScary nullable: true
     }
 
     static mapping = {

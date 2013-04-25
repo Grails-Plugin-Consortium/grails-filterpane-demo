@@ -1,4 +1,9 @@
-<g:if test="${isFiltered == true}">
+isFiltered = ${isFiltered}
+<BR>name=${name}
+<BR>value = ${value}
+<br>opName = ${opName}
+<br>
+
   <label for="${name}.yes">
     <g:message code="fp.tag.filterPane.property.boolean.true" default="Yes"/>
   </label>
@@ -17,4 +22,3 @@
            value="false"
            checked="${value == 'false'}"
            onClick="grailsFilterPane.selectDefaultOperator('${opName}')"/>
-</g:if>
