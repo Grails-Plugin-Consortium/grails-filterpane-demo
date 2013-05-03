@@ -13,5 +13,6 @@ class Robot {
 
     static constraints = {
         parts nullable: true
+        name nullable: true, blank: true
     }
 }

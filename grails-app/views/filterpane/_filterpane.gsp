@@ -1,5 +1,5 @@
+<!-- This has been customized to be inline isntead of a popup -->
 <div id="${fp.containerId}"
-     class="filterpane${fp.containerIsDialog} ${fp.containerClass}"
      style="${fp.containerVisibleStyle}${fp.containerStyle}">
   <g:if test="${fp.showTitle}">
     <h2>${fp.title}</h2>
@@ -14,7 +14,7 @@
   <input type="hidden" name="uniqueCountColumn" value="${fp.uniqueCountColumn}"/>
 
 
-  <table cellspacing="0" cellpadding="0" class="filterPaneTable">
+  <table cellspacing="0" cellpadding="0" class="table table-bordered">
     <g:each in="${fp.properties}" var="propMap">
       <g:render template="/filterpane/filterpaneProperty" model="${propMap}"/>
     </g:each>

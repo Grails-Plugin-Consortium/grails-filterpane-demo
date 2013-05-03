@@ -3,8 +3,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="layout" content="main"/>
   <title>Robot List</title>
-  %{--<r:require module="scriptaculous" />--}%
-  <filterpane:includes/>
+  <r:require module="filterpane" />
 </head>
 
 <body>
@@ -62,7 +61,7 @@
                          additionalProperties="identifier"
                          associatedProperties="parts.functions.name, parts.name"
                          titleKey="fp.tag.filterPane.titleText"
-                         dialog="true"
+                         dialog="false"
                          visible="true"
                          showSortPanel="true"
                          showTitle="n"
