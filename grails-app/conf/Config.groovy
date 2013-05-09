@@ -99,8 +99,8 @@ log4j = {
     //debug 'grails.app.taglib.org.grails.plugin.filterpane.FilterPaneTagLib',
     debug 'grails.app.taglib.org.grails.plugin.filterpane.FilterPaneTagLib'
 
-    trace 'org.hibernate.type'
-    debug 'org.hibernate.SQL'
+//    trace 'org.hibernate.type'
+//    debug 'org.hibernate.SQL'
 
 //    root {
 //        debug 'stdout'
