@@ -15,6 +15,6 @@ branches:
 
 script: curl -s get.gvmtool.net | bash
   && gvm install grails 2.2.1
-  && gvm use grails 2.1.1
+  && gvm use grails 2.2.1
   && echo "gvm_auto_answer=true" > ~/.gvm/etc/config
   && grails test-app --non-interactive
