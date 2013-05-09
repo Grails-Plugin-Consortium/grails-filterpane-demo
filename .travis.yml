@@ -10,6 +10,7 @@ before_install:
 - ~/install_gvm.sh
 - source ~/.gvm/bin/gvm-init.sh
 - echo "gvm_auto_answer=true" > ~/.gvm/etc/config
+- curl -s https://raw.github.com/ctoestreich/gvm/master/src/main/bash/gvm-install.sh > ~/.gvm/src/gvm-install.sh
 - gvm install grails 2.2.0
 - gvm use grails 2.2.0
 
