@@ -4,17 +4,13 @@ jdk:
 - oraclejdk6
 
 before_install:
-- sudo add-apt-repository -y ppa:groovy-dev/grails
-- sudo apt-get update
-- sudo apt-get install grails-2.2.0
+- curl -s get.gvmtool.net | bash
+- gvm install 2.2.1
+- gvm use 2.2.1
+- echo "gvm_auto_answer=true" > ~/.gvm/etc/config
 
 branches:
   only:
     - master
 
-
-script: curl -s get.gvmtool.net | bash
-  && gvm install grails 2.2.1
-  && gvm use grails 2.2.1
-  && echo "gvm_auto_answer=true" > ~/.gvm/etc/config
-  && grails test-app --non-interactive
+script: grails test-app --non-interactive
