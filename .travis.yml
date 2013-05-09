@@ -5,9 +5,10 @@ jdk:
 
 before_install:
 - curl -s get.gvmtool.net | bash
+- source ~/.gvm/bin/gvm-init.sh
+- echo "gvm_auto_answer=true" > ~/.gvm/etc/config
 - gvm install grails 2.2.0
 - gvm use grails 2.2.0
-- echo "gvm_auto_answer=true" > ~/.gvm/etc/config
 
 branches:
   only:
