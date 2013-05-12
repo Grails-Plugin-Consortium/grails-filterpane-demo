@@ -18,4 +18,4 @@ branches:
   only:
     - master
 
-script: ./grailsw test-app --non-interactive
+script: sudo ./grailsw test-app --non-interactive
