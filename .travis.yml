@@ -18,4 +18,5 @@ branches:
   only:
     - master
 
-script: sudo ./grailsw test-app --non-interactive
+script: ./grailsw refresh-dependencies
+  && ./grailsw test-app
