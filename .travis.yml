@@ -21,4 +21,5 @@ branches:
 script: grails test-app --non-interactive
   && gvm install grails 2.2.2
   && gvm use grails 2.2.2
+  && grails upgrade --non-interactive
   && grails test-app --non-interactive
