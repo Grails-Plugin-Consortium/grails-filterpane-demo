@@ -72,3 +72,7 @@ body {
     left: 40%;
     width: 60%;
 }
+
+.paginateButtons a {
+    margin-left: 10px;
+}

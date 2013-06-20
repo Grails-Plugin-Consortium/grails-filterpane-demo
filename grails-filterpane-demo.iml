@@ -45,14 +45,16 @@
       <library name="Grails User Library (grails-filterpane-test)">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.jadira.usertype/usertype.spi/jars/usertype.spi-1.9.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.jadira.usertype/usertype.jodatime/jars/usertype.jodatime-1.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="grails-filterpane-demo-grailsPlugins" />
     <orderEntry type="library" name="grails-2.2.1" level="application" />
+    <orderEntry type="module" module-name="grails-filterpane-demo-grailsPlugins" />
   </component>
 </module>
 

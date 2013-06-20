@@ -70,5 +70,10 @@ class BootStrap {
         Robot.findOrSaveWhere(name: 'supreme commander')
                 .addToParts(Part.findOrSaveWhere(name: 'laser')
                                     .addToFunctions(Function.findOrSaveWhere(name: 'zapping')))
+
+
+        new Calendar(name: 'Sports').save()
+        new Calendar(name: 'School').save()
+        new Calendar(name: 'Work').save()
     }
 }
