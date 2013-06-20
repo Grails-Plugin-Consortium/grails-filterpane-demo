@@ -20,6 +20,7 @@ class BookTests {
         // Tear down logic here
     }
 
+    //make tests pass ... lame
     void testSomething() {
         assert true
     }
