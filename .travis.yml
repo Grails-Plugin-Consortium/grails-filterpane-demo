@@ -18,8 +18,8 @@ branches:
   only:
     - master
 
-script: grails test-app --non-interactive
+script: grails test-app --non-interactive --stacktrace
   && gvm install grails 2.2.2
   && gvm use grails 2.2.2
-  && grails upgrade --non-interactive
-  && grails test-app --non-interactive
+  && grails upgrade --non-interactive --stacktrace
+  && grails test-app --non-interactive --stacktrace
