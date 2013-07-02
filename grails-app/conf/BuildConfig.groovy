@@ -56,6 +56,7 @@ grails.project.dependency.resolution = {
         runtime ":filterpane:2.1.9"
         compile ":twitter-bootstrap:2.3.0"
         compile ":joda-time:1.4"
+        compile ':cache:1.0.1'
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
@@ -65,7 +66,5 @@ grails.project.dependency.resolution = {
         build ":tomcat:$grailsVersion"
 
         runtime ":database-migration:1.3.2"
-
-        compile ':cache:1.0.1'
     }
 }
