@@ -53,7 +53,7 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.8.3"
         compile ":jquery-ui:1.8.24"
         runtime ":resources:1.1.6"
-        runtime ":filterpane:2.1.9"
+        runtime ":filterpane:2.2.1"
         compile ":twitter-bootstrap:2.3.0"
         compile ":joda-time:1.4"
         compile ':cache:1.0.1'
