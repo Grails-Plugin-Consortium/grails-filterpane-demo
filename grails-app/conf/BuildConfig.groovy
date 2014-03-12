@@ -21,7 +21,8 @@ grails.project.dependency.resolution = {
     }
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
-    legacyResolve true // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
+    legacyResolve true
+    // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
@@ -51,14 +52,14 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-	build ":tomcat:7.0.50.1"
-	compile ":hibernate:3.6.10.8"
-	compile ':scaffolding:2.0.1' // use latest version here
-        
+        build ":tomcat:7.0.50.1"
+        compile ":hibernate:3.6.10.8"
+        compile ':scaffolding:2.0.1' // use latest version here
+
         runtime ":jquery:1.8.3"
         compile ":jquery-ui:1.8.24"
         runtime ":resources:1.2.2"
-        runtime ":filterpane:2.3.0"
+        runtime ":filterpane:2.3.2"
         compile ":twitter-bootstrap:2.3.0"
         compile ":joda-time:1.4"
         compile ':cache:1.0.1'
