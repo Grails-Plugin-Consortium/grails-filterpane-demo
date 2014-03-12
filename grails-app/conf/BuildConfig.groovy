@@ -11,6 +11,8 @@ grails.project.source.level = 1.6
 //   run: [maxMemory:1024, minMemory:64, debug:false, maxPerm:256]
 //]
 
+grails.project.dependency.resolver = "maven" // or ivy
+
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
@@ -49,10 +51,13 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        runtime ":hibernate:$grailsVersion"
+	build ":tomcat:7.0.50.1"
+	compile ":hibernate:3.6.10.8"
+	compile ':scaffolding:2.0.1' // use latest version here
+        
         runtime ":jquery:1.8.3"
         compile ":jquery-ui:1.8.24"
-        runtime ":resources:1.1.6"
+        runtime ":resources:1.2.2"
         runtime ":filterpane:2.3.0"
         compile ":twitter-bootstrap:2.3.0"
         compile ":joda-time:1.4"
@@ -63,7 +68,6 @@ grails.project.dependency.resolution = {
         //runtime ":cached-resources:1.0"
         //runtime ":yui-minify-resources:0.1.5"
 
-        build ":tomcat:$grailsVersion"
         runtime ":database-migration:1.3.2"
     }
 }
