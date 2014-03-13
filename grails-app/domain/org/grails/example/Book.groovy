@@ -16,6 +16,14 @@ class Book {
     BigDecimal cost = 0.00
     Boolean isScary
 
+    void setCurrency(String currency) {
+        this.currency = Currency.getInstance(currency)
+    }
+
+    void setCurrency(Currency currency) {
+        this.currency = currency
+    }
+
     static constraints = {
         title(blank: true, nullable: true)
         coAuthor(nullable: true)
@@ -37,6 +45,8 @@ class Book {
         sort "title"
         authors lazy: false
         pricePlusTax formula: 'price * 1.055'
+        tablePerSubclass true
+        tablePerHierarchy true
     }
 
     String toString() {

@@ -62,10 +62,10 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        grails.gorm.failOnError = true
     }
     production {
         grails.logging.jul.usebridge = false
-        // TODO: grails.serverURL = "http://www.changeme.com"
     }
 }
 
@@ -102,16 +102,19 @@ log4j = {
 //    trace 'org.hibernate.type'
 //    debug 'org.hibernate.SQL'
 
-//    root {
-//        debug 'stdout'
-//        additivity = true
-//    }
+//    debug 'org.hibernate.SQL'
+//    trace 'org.hibernate.type.descriptor.sql.BasicBinder'
+
+    root {
+        debug 'stdout'
+        additivity = true
+    }
 }
 
 grails.gorm.default.mapping = {
     "user-type" type: org.jadira.usertype.dateandtime.joda.PersistentDateTime, class: org.joda.time.DateTime
     "user-type" type: org.jadira.usertype.dateandtime.joda.PersistentLocalDate, class: org.joda.time.LocalDate
-    // … define as many other user type mappings as you need
+    // ï¿½ define as many other user type mappings as you need
 }
 
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements

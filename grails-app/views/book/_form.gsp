@@ -55,7 +55,8 @@
     <g:message code="book.currency.label" default="Currency"/>
 
   </label>
-  <g:currencySelect name="currency" value="${book?.currency}" noSelection="['': '']"/>
+  %{--<g:currencySelect name="currency" value="${book?.currency}" noSelection="['': '']"/>--}%
+    Currency Edit is disabled due to issue (needs fix)<br>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: book, field: 'inStock', 'error')} ">

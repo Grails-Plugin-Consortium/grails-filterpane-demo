@@ -72,3 +72,5 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.3.2"
     }
 }
+
+//grails.plugin.location.'filterpane' = "../grails-filterpane"

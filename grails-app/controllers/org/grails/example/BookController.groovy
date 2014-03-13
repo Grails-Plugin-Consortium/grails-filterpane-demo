@@ -68,6 +68,7 @@ class BookController {
 				redirect(action:show,id:book.id)
 			}
 			else {
+                flash.message = book.errors.toString()
 				render(view:'edit',model:[book:book])
 			}
 		}
@@ -90,6 +91,7 @@ class BookController {
 			redirect(action:show,id:book.id)
 		}
 		else {
+            flash.message = book.errors.toString()
 			render(view:'create',model:[book:book])
 		}
 	}

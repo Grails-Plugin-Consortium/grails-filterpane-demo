@@ -35,6 +35,7 @@
       <configuration>
         <datasource-map>
           <unit-entry name="Gorm" />
+          <unit-entry name="sessionFactory" />
         </datasource-map>
         <naming-strategy-map />
       </configuration>
@@ -50,6 +51,12 @@
       <sourceFolder url="file://$MODULE_DIR$/grails-app/conf" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/grails-app/utils" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/grails-app/taglib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
     </content>
@@ -79,9 +86,11 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/core/compiler/ecj/3.7.2/ecj-3.7.2.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-jasper/7.0.50/tomcat-embed-jasper-7.0.50.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina-ant/7.0.50/tomcat-catalina-ant-7.0.50.jar!/" />
+          <root url="file://$MODULE_DIR$/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
     <orderEntry type="library" name="grails-2.3.6" level="application" />

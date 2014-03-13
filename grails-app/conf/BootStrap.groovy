@@ -47,6 +47,10 @@ class BootStrap {
         new Book(authors: [dm], coAuthor: jl, title: 'Beginning iPhone Development', releaseDate: java.sql.Date.valueOf('2008-11-01'), inStock: true, price: 39.99, cost: 27.99, readPriority: 'Normal', bookType: BookType.Reference).save()
         new Book(authors: [dm], coAuthor: jl, title: 'Hello-how are you', releaseDate: java.sql.Date.valueOf('2008-11-01'), inStock: true, price: 39.99, cost: 27.99, readPriority: 'Normal', bookType: BookType.Reference).save()
 
+        println 'adding magazines'
+        new Magazine(authors: [mg], coAuthor: jl, title: 'Magazine 1', releaseDate: java.sql.Date.valueOf('2008-11-09'), inStock: true, price: 9.99, cost: 5.99, readPriority: 'Normal', bookType: BookType.Reference).save()
+        new Magazine(authors: [cl], coAuthor: jl, title: 'Magazine 2', releaseDate: java.sql.Date.valueOf('2008-11-07'), inStock: true, price: 8.99, cost: 4.99, readPriority: 'Normal', bookType: BookType.Reference).save()
+
         new Bookmark(book: vdt, page: 42, dateCreated: java.sql.Date.valueOf('2011-02-17')).save()
         new Bookmark(book: uhg, page: 247, dateCreated: java.sql.Date.valueOf('2010-11-05')).save()
 
