@@ -35,6 +35,7 @@
         <g:sortableColumn property="price" title="Price" params="${filterParams}"/>
         <g:sortableColumn property="pricePlusTax" title="Price Plus Tax" params="${filterParams}"/>
         <g:sortableColumn property="inStock" title="In Stock" params="${filterParams}"/>
+        <th>Is Magazine</th>
 
       </tr>
       </thead>
@@ -51,6 +52,7 @@
           <td>${book.price?.encodeAsHTML()}</td>
           <td>${book.pricePlusTax?.encodeAsHTML()}</td>
           <td>${book.inStock?.encodeAsHTML()}</td>
+          <td>${book.isMagazine?.encodeAsHTML()}</td>
 
         </tr>
       </g:each>

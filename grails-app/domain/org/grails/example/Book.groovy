@@ -52,4 +52,8 @@ class Book {
     String toString() {
         return title
     }
+
+    Boolean getIsMagazine(){
+        this instanceof Magazine
+    }
 }

@@ -28,7 +28,7 @@
           <ul class="nav">
             <li><a href="${createLink(uri:'/')}">Home</a></li>
             <li><a href="${createLink(controller:'book', action:'list')}">Book Example</a></li>
-            <li><a href="${createLink(controller:'magazine', action:'list')}">Magazine Example</a></li>
+            %{--<li><a href="${createLink(controller:'magazine', action:'list')}">Magazine Example</a></li>--}%
             <li><a href="${createLink(controller:'robot', action:'list')}">Nested Example</a></li>
             <li><a href="${createLink(controller:'calendar', action:'list')}">Joda Time Example</a></li>
           </ul>
