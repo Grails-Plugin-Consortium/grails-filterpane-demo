@@ -9,14 +9,13 @@ class Author {
     Date birthdate = new Date()
 	
 	static hasMany = [ books: Book ]
-    static belongsTo = [Book]
+    static belongsTo = Book
 	
 	String toString() {
 		return "${lastName}, ${firstName}"
 	}
 
     static constraints = {
-        firstName blank: false
         firstName blank: false
         favoriteGenre nullable: true
         publisher nullable: true

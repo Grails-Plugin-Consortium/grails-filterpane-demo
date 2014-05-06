@@ -59,18 +59,12 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.8.3"
         compile ":jquery-ui:1.8.24"
         runtime ":resources:1.2.2"
-        runtime ":filterpane:2.3.3"
+        runtime ":filterpane:2.4.2"
         compile ":twitter-bootstrap:2.3.0"
         compile ":joda-time:1.4"
         compile ':cache:1.0.1'
-
-        // Uncomment these (or add new ones) to enable additional resources capabilities
-        //runtime ":zipped-resources:1.0"
-        //runtime ":cached-resources:1.0"
-        //runtime ":yui-minify-resources:0.1.5"
-
         runtime ":database-migration:1.3.2"
     }
 }
 
-//grails.plugin.location.'filterpane' = "../grails-filterpane"
+//grails.plugin.location.'filterpane' = '../grails-filterpane'
