@@ -5,7 +5,7 @@
   <meta name="layout" content="main">
   <g:set var="entityName" value="${message(code: 'calendar.label', default: 'Calendar')}"/>
   <title><g:message code="default.list.label" args="[entityName]"/></title>
-  <r:require module="filterpane" />
+    <asset:javascript src="fp.js" />
 </head>
 
 <body>

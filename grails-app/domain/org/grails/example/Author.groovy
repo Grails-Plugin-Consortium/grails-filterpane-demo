@@ -5,7 +5,7 @@ class Author {
 	String lastName = 'last'
     FavoriteGenre favoriteGenre
 	Publisher publisher
-	int age = 30
+	Integer age = 30
     Date birthdate = new Date()
 	
 	static hasMany = [ books: Book ]

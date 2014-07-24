@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="layout" content="main"/>
-  <r:require module="scriptaculous"/>
+  <asset:javascript src="scriptaculous.js" />
   <title>Author List</title>
 </head>
 

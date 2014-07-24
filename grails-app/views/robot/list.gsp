@@ -3,7 +3,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="layout" content="main"/>
   <title>Robot List</title>
-  <r:require module="filterpane" />
+    <asset:javascript src="fp.js" />
 </head>
 
 <body>

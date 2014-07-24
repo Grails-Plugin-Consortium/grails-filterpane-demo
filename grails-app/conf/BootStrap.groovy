@@ -15,7 +15,7 @@ class BootStrap {
     }
 
 
-    private bootstrapTestData() {
+    private static bootstrapTestData() {
         Publisher p = new Publisher(firstName: 'Some', lastName: 'Publisher').save()
         Publisher p2 = new Publisher(firstName: 'Some', lastName: 'Other Publisher').save()
 
