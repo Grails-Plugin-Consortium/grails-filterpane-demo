@@ -58,15 +58,17 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
-        compile "org.jadira.usertype:usertype.jodatime:1.9"
+//        compile "org.jadira.usertype:usertype.jodatime:1.9"
+        compile "org.jadira.usertype:usertype.core:3.2.0.GA"
     }
 
     plugins {
         build ":tomcat:7.0.54"
-        runtime ":hibernate:3.6.10.16" //":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"
+        //runtime ":hibernate:3.6.10.16" //":hibernate4:4.3.5.4" // or ":hibernate:3.6.10.16"
+        runtime ":hibernate4:4.3.5.4"
 //        compile ':scaffolding:2.1.2' // use latest version here
 
-        runtime ":filterpane:2.4.4"
+        runtime ":filterpane:2.4.5"
         compile ":joda-time:1.5"
         compile ':cache:1.1.7'
         compile ":asset-pipeline:1.9.4"
