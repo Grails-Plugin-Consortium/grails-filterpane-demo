@@ -60,6 +60,10 @@ dependencies {
     compile "org.grails.plugins:hibernate"
     compile "org.grails.plugins:cache"
     compile "org.hibernate:hibernate-ehcache"
+    compile "org.jadira.usertype:usertype.core:3.2.0.GA"
+    compile "org.grails.plugins:joda-time:2.0.0-SNAPSHOT"
+    compile "org.grails.plugins:grails-filterpane:3.0.0-SNAPSHOT"
+
 
     runtime "org.grails.plugins:asset-pipeline"
     runtime "org.grails.plugins:scaffolding"
@@ -71,6 +75,7 @@ dependencies {
     testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0'
 
     console "org.grails:grails-console"
+
 }
 
 task wrapper(type: Wrapper) {
