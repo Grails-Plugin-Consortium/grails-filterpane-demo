@@ -27,6 +27,5 @@ build/
 /out
 
 # IntelliJ IDEA files below
-*.iml
 .idea/
 /bin/

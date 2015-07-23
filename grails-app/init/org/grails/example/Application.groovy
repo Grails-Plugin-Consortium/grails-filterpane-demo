@@ -1,4 +1,4 @@
-package grails.filterpane.demo
+package org.grails.example
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
