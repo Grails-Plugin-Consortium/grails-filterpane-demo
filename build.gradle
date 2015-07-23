@@ -61,8 +61,8 @@ dependencies {
     compile "org.grails.plugins:cache"
     compile "org.hibernate:hibernate-ehcache"
     compile "org.jadira.usertype:usertype.core:3.2.0.GA"
-    compile "org.grails.plugins:joda-time:2.0.0-SNAPSHOT"
-    compile "org.grails.plugins:grails-filterpane:3.0.0-SNAPSHOT"
+    compile "org.grails.plugins:joda-time:2.0.0-SNAPSHOT"//todo : must have plugin installed on machine, since this plugin is not yet published.
+    compile "org.grails.plugins:grails-filterpane:3.0.0-SNAPSHOT"//todo : must have plugin installed on machine, since this plugin is not yet published.
 
 
     runtime "org.grails.plugins:asset-pipeline"

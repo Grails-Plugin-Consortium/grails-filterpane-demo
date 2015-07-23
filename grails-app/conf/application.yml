@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: grails.filterpane.demo
+        defaultPackage: org.grails.example
 info:
     app:
         name: '@info.app.name@'
