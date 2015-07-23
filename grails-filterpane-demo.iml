@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="EclipseModuleManager">
-    <conelement value="org.grails.ide.eclipse.core.CLASSPATH_CONTAINER" />
-    <src_description expected_position="0">
-      <src_folder value="file://$MODULE_DIR$/src/java" expected_position="0" />
-      <src_folder value="file://$MODULE_DIR$/src/groovy" expected_position="1" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/conf" expected_position="2" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/controllers" expected_position="3" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/domain" expected_position="4" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/services" expected_position="5" />
-      <src_folder value="file://$MODULE_DIR$/grails-app/taglib" expected_position="6" />
-      <src_folder value="file://$MODULE_DIR$/test/integration" expected_position="7" />
-      <src_folder value="file://$MODULE_DIR$/test/unit" expected_position="8" />
-    </src_description>
-  </component>
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="Grails" name="Grails" removed="false">
+        <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/web-app/WEB-INF/applicationContext.xml</file>
         </fileset>
       </configuration>
@@ -35,82 +21,23 @@
       <configuration>
         <datasource-map>
           <unit-entry name="Gorm" />
-          <unit-entry name="sessionFactory" />
         </datasource-map>
         <naming-strategy-map />
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/target/eclipseclasses" />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/i18n" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/controllers" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/grails-app/domain" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/grails-app/conf" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/unit" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/grails-app/utils" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/grails-app/taglib" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/integration" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/target/classes" />
-      <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
-      <excludeFolder url="file://$MODULE_DIR$/target/work/plugin-build-classes" />
-      <excludeFolder url="file://$MODULE_DIR$/target/work/plugin-classes" />
-      <excludeFolder url="file://$MODULE_DIR$/target/work/plugin-provided-classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/resources" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/scriptCache" />
-      <excludeFolder url="file://$MODULE_DIR$/target/work/tomcat" />
     </content>
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="org.grails.ide.eclipse.core.CLASSPATH_CONTAINER" level="application" />
-    <orderEntry type="module-library" exported="">
-      <library name="Grails User Library (grails-filterpane-demo)">
-        <CLASSES>
-          <root url="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jdt/core/compiler/ecj/3.7.2/ecj-3.7.2.jar!/" />
-          <root url="file://$MODULE_DIR$/lib" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/mozilla/rhino/1.7R4/rhino-1.7R4.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/joda-time/joda-time/2.3/joda-time-2.3.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.17.1-GA/javassist-3.17.1-GA.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/4.0.5.RELEASE/spring-orm-4.0.5.RELEASE.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/net/sf/ehcache/ehcache-core/2.4.8/ehcache-core-2.4.8.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/7.0.53/tomcat-embed-core-7.0.53.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/7.0.53/tomcat-embed-websocket-7.0.53.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-logging-log4j/7.0.53/tomcat-embed-logging-log4j-7.0.53.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/7.0.53/tomcat-embed-el-7.0.53.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-jasper/7.0.53/tomcat-embed-jasper-7.0.53.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina-ant/7.0.53/tomcat-catalina-ant-7.0.53.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/5.0.3.Final/hibernate-validator-5.0.3.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-ehcache/4.3.5.Final/hibernate-ehcache-4.3.5.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/grails/grails-datastore-gorm-plugin-support/3.1.1.RELEASE/grails-datastore-gorm-plugin-support-3.1.1.RELEASE.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/grails/grails-datastore-gorm-hibernate-core/3.1.1.RELEASE/grails-datastore-gorm-hibernate-core-3.1.1.RELEASE.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/grails/grails-datastore-gorm-hibernate4/3.1.1.RELEASE/grails-datastore-gorm-hibernate4-3.1.1.RELEASE.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/jadira/usertype/usertype.spi/3.2.0.GA/usertype.spi-3.2.0.GA.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/4.3.4.Final/hibernate-entitymanager-4.3.4.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/jadira/usertype/usertype.core/3.2.0.GA/usertype.core-3.2.0.GA.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module" module-name="grails-filterpane-demo-grailsPlugins" />
+    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="grails-2.4.2" level="application" />
   </component>
 </module>
