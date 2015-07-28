@@ -4,13 +4,11 @@ import org.joda.time.*
 
 class Calendar {
 
-    DateTime dateTime = new DateTime() //Filtering this will not work due to multi column
     LocalDate localDate = new LocalDate()
     Date date = new Date()
     String name
 
     static constraints = {
-        dateTime nullable: true
         date nullable: true
         localDate nullable: true
         name nullable: false

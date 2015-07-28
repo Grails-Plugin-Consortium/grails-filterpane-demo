@@ -27,8 +27,6 @@
     <thead>
     <tr>
 
-      <g:sortableColumn property="dateTime" title="${message(code: 'calendar.dateTime.label', default: 'Date Time')}" params="${filterParams}"/>
-
       <g:sortableColumn property="localDate" title="${message(code: 'calendar.localDate.label', default: 'Local Date')}" params="${filterParams}"/>
 
       <g:sortableColumn property="date" title="${message(code: 'calendar.date.label', default: 'Date')}" params="${filterParams}"/>
@@ -41,9 +39,8 @@
     <g:each in="${calendarInstanceList}" status="i" var="calendarInstance">
       <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 
-        <td><g:link action="show" id="${calendarInstance.id}">${fieldValue(bean: calendarInstance, field: "dateTime")}</g:link></td>
 
-        <td>${fieldValue(bean: calendarInstance, field: "localDate")}</td>
+        <td><g:link action="show" id="${calendarInstance.id}">${fieldValue(bean: calendarInstance, field: "localDate")}</g:link></td>
 
         <td><g:formatDate date="${calendarInstance.date}"/></td>
 
@@ -64,7 +61,6 @@
 <filterpane:filterPane domain="org.grails.example.Calendar"
                        additionalProperties="identifier"
                        associatedProperties=""
-                       excludeProperties="dateTime"
                        titleKey="fp.tag.filterPane.titleText"
                        dialog="true"
                        visible="n"

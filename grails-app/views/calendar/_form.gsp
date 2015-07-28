@@ -1,15 +1,5 @@
 <%@ page import="org.grails.example.Calendar" %>
 
-
-
-<div class="fieldcontain ${hasErrors(bean: calendarInstance, field: 'dateTime', 'error')} ">
-	<label for="dateTime">
-		<g:message code="calendar.dateTime.label" default="Date Time" />
-		
-	</label>
-	
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: calendarInstance, field: 'date', 'error')} ">
 	<label for="date">
 		<g:message code="calendar.date.label" default="Date" />
