@@ -13,5 +13,6 @@ class Bookmark {
 	
 	static mapping = {
 		sort "page"
-	}
+        autoImport false
+    }
 }

@@ -22,4 +22,9 @@ class Author {
         age nullable: true
         birthdate nullable: true
     }
+
+    static mapping = {
+        autoImport false
+    }
 }
+

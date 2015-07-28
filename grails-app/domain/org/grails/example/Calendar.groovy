@@ -1,7 +1,6 @@
 package org.grails.example
 
 import org.joda.time.*
-import org.jadira.usertype.dateandtime.joda.*
 
 class Calendar {
 
@@ -18,9 +17,6 @@ class Calendar {
     }
 
     static mapping = {
-        dateTime type: PersistentDateTimeWithZone, {
-            column name: "dateTime_timestamp"
-            column name: "dateTime_zone"
-        }
+        autoImport false
     }
 }

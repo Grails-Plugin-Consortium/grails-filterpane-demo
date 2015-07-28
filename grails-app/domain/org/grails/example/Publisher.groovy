@@ -12,4 +12,8 @@ class Publisher {
 		firstName()
 		lastName()
     }
+
+    static mapping = {
+        autoImport false
+    }
 }
