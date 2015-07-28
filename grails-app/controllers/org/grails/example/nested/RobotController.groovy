@@ -14,14 +14,14 @@ class RobotController {
     }
 
     def filter = {
-        if(!params.max) params.max = 10
-        render( view:'list', model:[ robotList: filterPaneService.filter( params, Robot ), robotCount: filterPaneService.count( params, Robot ), filterParams: FilterPaneUtils.extractFilterParams(params), params:params ] )
+        if (!params.max) params.max = 10
+        render(view: 'list', model: [robotList: filterPaneService.filter(params, Robot), robotCount: filterPaneService.count(params, Robot), filterParams: FilterPaneUtils.extractFilterParams(params), params: params])
     }
 
     def list(Integer max) {
-        if(!params.max) params.max = 10
+        if (!params.max) params.max = 10
         log.debug("Robot is ${Robot} or type ${Robot.class}")
-        [ robotList: Robot.list( params ), filterParams: FilterPaneUtils.extractFilterParams(params) ]
+        [robotList: Robot.list(params), filterParams: FilterPaneUtils.extractFilterParams(params)]
     }
 
     def create() {
@@ -72,8 +72,8 @@ class RobotController {
         if (version != null) {
             if (robotInstance.version > version) {
                 robotInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'robot.label', default: 'Robot')] as Object[],
-                          "Another user has updated this Robot while you were editing")
+                        [message(code: 'robot.label', default: 'Robot')] as Object[],
+                        "Another user has updated this Robot while you were editing")
                 render(view: "edit", model: [robotInstance: robotInstance])
                 return
             }
