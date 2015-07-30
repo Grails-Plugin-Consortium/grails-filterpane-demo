@@ -26,14 +26,6 @@
       <tbody>
 
       <tr class="prop">
-        <td valign="top" class="name"><g:message code="calendar.dateTime.label" default="Date Time"/></td>
-
-        <td valign="top" class="value"><g:fieldValue bean="${calendarInstance}" field="dateTime"/></td>
-
-      </tr>
-
-
-      <tr class="prop">
         <td valign="top" class="name"> <span id="date-label" class="property-label"><g:message code="calendar.date.label" default="Date"/></span>
 
          </td>

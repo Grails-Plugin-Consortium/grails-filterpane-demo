@@ -47,6 +47,7 @@ class Book {
         pricePlusTax formula: 'price * 1.055'
         tablePerSubclass true
         tablePerHierarchy true
+        autoImport false
     }
 
     String toString() {

@@ -15,14 +15,14 @@ class CalendarController {
 
     def list(Integer max) {
 
-        if(!params.max) params.max = 10
+        if (!params.max) params.max = 10
         log.debug("Book is ${Book} or type ${Book.class}")
-        [ calendarInstanceList: Calendar.list( params ), calendarInstanceTotal: Calendar.count(), filterParams: FilterPaneUtils.extractFilterParams(params) ]
+        [calendarInstanceList: Calendar.list(params), calendarInstanceTotal: Calendar.count(), filterParams: FilterPaneUtils.extractFilterParams(params)]
     }
 
     def filter = {
-        if(!params.max) params.max = 10
-        render( view:'list', model:[ calendarInstanceList: filterPaneService.filter( params, Calendar ), calendarInstanceTotal: filterPaneService.count( params, Calendar ), filterParams: FilterPaneUtils.extractFilterParams(params), params:params ] )
+        if (!params.max) params.max = 10
+        render(view: 'list', model: [calendarInstanceList: filterPaneService.filter(params, Calendar), calendarInstanceTotal: filterPaneService.count(params, Calendar), filterParams: FilterPaneUtils.extractFilterParams(params), params: params])
     }
 
     def create() {
@@ -31,7 +31,7 @@ class CalendarController {
 
     def save() {
         def calendarInstance = new Calendar(params)
-        if(!calendarInstance.save(flush: true)) {
+        if (!calendarInstance.save(flush: true)) {
             render(view: "create", model: [calendarInstance: calendarInstance])
             return
         }
@@ -42,7 +42,7 @@ class CalendarController {
 
     def show(Long id) {
         def calendarInstance = Calendar.get(id)
-        if(!calendarInstance) {
+        if (!calendarInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'calendar.label', default: 'Calendar'), id])
             redirect(action: "list")
             return
@@ -53,7 +53,7 @@ class CalendarController {
 
     def edit(Long id) {
         def calendarInstance = Calendar.get(id)
-        if(!calendarInstance) {
+        if (!calendarInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'calendar.label', default: 'Calendar'), id])
             redirect(action: "list")
             return
@@ -64,17 +64,17 @@ class CalendarController {
 
     def update(Long id, Long version) {
         def calendarInstance = Calendar.get(id)
-        if(!calendarInstance) {
+        if (!calendarInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'calendar.label', default: 'Calendar'), id])
             redirect(action: "list")
             return
         }
 
-        if(version != null) {
-            if(calendarInstance.version > version) {
+        if (version != null) {
+            if (calendarInstance.version > version) {
                 calendarInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                                                    [message(code: 'calendar.label', default: 'Calendar')] as Object[],
-                                                    "Another user has updated this Calendar while you were editing")
+                        [message(code: 'calendar.label', default: 'Calendar')] as Object[],
+                        "Another user has updated this Calendar while you were editing")
                 render(view: "edit", model: [calendarInstance: calendarInstance])
                 return
             }
@@ -82,7 +82,7 @@ class CalendarController {
 
         calendarInstance.properties = params
 
-        if(!calendarInstance.save(flush: true)) {
+        if (!calendarInstance.save(flush: true)) {
             render(view: "edit", model: [calendarInstance: calendarInstance])
             return
         }
@@ -93,7 +93,7 @@ class CalendarController {
 
     def delete(Long id) {
         def calendarInstance = Calendar.get(id)
-        if(!calendarInstance) {
+        if (!calendarInstance) {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'calendar.label', default: 'Calendar'), id])
             redirect(action: "list")
             return
@@ -104,7 +104,7 @@ class CalendarController {
             flash.message = message(code: 'default.deleted.message', args: [message(code: 'calendar.label', default: 'Calendar'), id])
             redirect(action: "list")
         }
-        catch(DataIntegrityViolationException e) {
+        catch (DataIntegrityViolationException e) {
             flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'calendar.label', default: 'Calendar'), id])
             redirect(action: "show", id: id)
         }

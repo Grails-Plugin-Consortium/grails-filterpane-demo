@@ -11,6 +11,10 @@ class Function {
     static constraints = {
     }
 
+    static mapping = {
+        autoImport false
+    }
+
     @Override
     public String toString() {
         name

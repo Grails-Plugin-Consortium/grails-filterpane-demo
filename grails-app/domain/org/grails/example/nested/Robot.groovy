@@ -15,4 +15,8 @@ class Robot {
         parts nullable: true
         name nullable: true, blank: true
     }
+
+    static mapping = {
+        autoImport false
+    }
 }
