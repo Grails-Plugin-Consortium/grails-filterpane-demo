@@ -1,4 +1,4 @@
-<%@ page import="org.grails.plugin.filterpane.FilterPaneOperationType" %>
+<%@ page import="org.grails.plugins.filterpane.FilterPaneOperationType" %>
 <g:if test="${isFiltered == true}">
   <h5>Custom Criteria</h5>
   <ul id="${id}" class="${styleClass}" style="${style}" title="${title}">

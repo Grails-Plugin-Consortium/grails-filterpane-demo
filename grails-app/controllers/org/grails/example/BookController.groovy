@@ -1,6 +1,6 @@
 package org.grails.example
 
-import org.grails.plugin.filterpane.FilterPaneUtils
+import org.grails.plugins.filterpane.FilterPaneUtils
 
 class BookController {
 	

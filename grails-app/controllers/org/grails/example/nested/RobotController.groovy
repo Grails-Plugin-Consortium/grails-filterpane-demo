@@ -1,7 +1,7 @@
 package org.grails.example.nested
 
 import org.springframework.dao.DataIntegrityViolationException
-import org.grails.plugin.filterpane.FilterPaneUtils
+import org.grails.plugins.filterpane.FilterPaneUtils
 
 class RobotController {
 
